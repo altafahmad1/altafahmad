@@ -4,8 +4,12 @@ var txt = ["Hello, I am ", "Altaf Ahmad.", "A Freelance ", "Web Developer ", "an
 var speed = 20; /* The speed/duration of the effect in milliseconds */
 
 
-const faders = document.querySelectorAll("fade-in");
-const options = {};
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+
+const options = {
+    rootMargin: "0px 0px -50px 0px"
+};
 
 function typeWriter() {
     if (count[0] < txt[0].length) {
@@ -53,5 +57,9 @@ const appearOnScroll = new IntersectionObserver(function (entries, appearOnScrol
 }, options);
 
 faders.forEach(fader => {
-    appearOnScroll.observe("h1");
+    appearOnScroll.observe(fader);
+});
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
 });

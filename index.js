@@ -3,6 +3,10 @@ var text = "hello, I am";
 var txt = ["Hello, I am ", "Altaf Ahmad.", "A Freelance ", "Web Developer ", "and ", "Software Engineer."]; /* The text */
 var speed = 20; /* The speed/duration of the effect in milliseconds */
 
+
+const faders = document.querySelectorAll("fade-in");
+const options = {};
+
 function typeWriter() {
     if (count[0] < txt[0].length) {
       document.getElementById("point1").innerHTML += txt[0].charAt(count[0]);
@@ -36,3 +40,18 @@ function typeWriter() {
     }
 }
 
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll){
+   entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            return;
+        } else {
+            console.log(entry.target);
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+   });
+}, options);
+
+faders.forEach(fader => {
+    appearOnScroll.observe("h1");
+});

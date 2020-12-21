@@ -87,13 +87,14 @@ header button:hover {
 }
 
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
 
-
-
-
-
-
-
+.fade-in.appear {
+    opacity: 1;
+}
 
 
 @media only screen and (max-width:1000px) {

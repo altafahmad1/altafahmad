@@ -44,12 +44,17 @@ function typeWriter() {
     }
 }
 
+$("button").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#profile-section").offset().top},
+        'slow');
+});
+
 const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll){
    entries.forEach(entry => {
         if(!entry.isIntersecting){
             return;
         } else {
-            console.log(entry.target);
             entry.target.classList.add("appear");
             appearOnScroll.unobserve(entry.target);
         }

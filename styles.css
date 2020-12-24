@@ -1,16 +1,25 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Josefin Slab', serif;
     overflow-x: hidden;
 }
 
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 /* -------------------------------------------------- Intro ------------------------------------------------ */
 
 .highlighted {
     font-weight: bold;
-    color: #96d10e;
+    color: #7caf03;
 }
 
-header {
+#intro-section {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -28,7 +37,19 @@ h3 {
     font-size: 2rem;
 }
 
-p {
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+span, p {
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -37,19 +58,19 @@ p {
     text-decoration: none;
     margin-top: 1rem;
     background-color: #fff;
-    color:  #7dad0d;
-    border: 3px solid  #7dad0d;
+    color:  #7caf03;
+    border: 3px solid  #7caf03;
     padding: 0 4rem;
     font-size: 3rem;
     line-height: 3rem;
-    background-image: linear-gradient(to bottom, #7dad0d 50%, #fff 50%);
+    background-image: linear-gradient(to bottom, #7caf03 50%, #fff 50%);
     background-size: 100% 200%;
     background-position: bottom;
     transition: all .3s ease-out;
 }
 
-.explore-button:click {
-    border: none;
+.explore-button:focus {
+    outline: none;
 }
 
 .explore-button:hover {
@@ -60,9 +81,9 @@ p {
 /* -------------------------------------------------- Profile Section ------------------------------------------------ */
 
 #profile-section {
-    padding: 2rem 0;
+    padding: 3rem 0;
     text-align: justify;
-    background-color: #7dad0d;
+    background-color: #7caf03;
     color: #fff;
 }
 
@@ -100,7 +121,7 @@ p {
 
 .slide-in {
     opacity: 0;
-    transition: opacity 750ms ease-in, transform 1000ms ease-in;
+    transition: opacity 1000ms ease-in, transform 1000ms ease-in;
 }
 
 .slide-in.appear{
@@ -118,6 +139,97 @@ p {
 }
 
 
+/* -------------------------------------------------- Education Section ------------------------------------------------ */
+
+#education-section {
+    margin-top: 5rem;
+}
+
+#education-section h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#education-section h1 {
+    text-align: center;
+}
+
+.ed-box{
+    margin: 3rem 0;
+}
+
+/* -------------------------------------------------- Skills Section ------------------------------------------------ */
+#skills-section h1 {
+    text-align: center;
+}
+
+#skills-section h5 {
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.skill-title {
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+.starred {
+    font-size: 1.5rem;
+    color: #7caf03;
+}
+
+.unstarred {
+    color: #bfbfbf;
+    font-size: 1.5rem;
+}
+
+.skills-col {
+    margin: 3rem 0;
+}
+
+/* -------------------------------------------------- Projects Section ------------------------------------------------ */
+
+
+#projects-section h1 {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+
+/* -------------------------------------------------- Footer ------------------------------------------------ */
+
+#contact-section {
+    padding: 3rem;
+    color: #fff;
+    background-color: #212529;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.work-icon {
+    margin-left: 3rem;
+    transition: transform 100ms ease-in;
+}
+
+.work-icon:hover {
+    transform: translateY(-3px);
+}
+
+.work-icon:first-of-type{
+    margin-left: 0;
+}
+
+
+
+
 
 
 
@@ -132,22 +244,23 @@ p {
     }
 }
 
-@media only screen and (max-width:576px) {
-    h1 {
-        font-size: 2rem;
-    } 
+@media only screen and (max-width:767px) {
 
-    h2 {
-        font-size: 1.8rem;
+    #skills-section {
+        text-align: center;
     }
-    
-    h3 {
-        font-size: 1.5rem;
+
+    .stars {
+        text-align: right;
     }
 
     header button {
         line-height: 2rem;
         padding: 0 2rem;
         font-size: 2rem;
-    }  
+    }
+    
+    #education-section {
+        text-align: center;
+    }
 }

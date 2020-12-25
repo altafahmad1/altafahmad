@@ -44,7 +44,7 @@ function typeWriter() {
     }
 }
 
-$("button").click(function() {
+$(".explore-button").click(function() {
     $('html,body').animate({
         scrollTop: $("#profile-section").offset().top},
         'slow');

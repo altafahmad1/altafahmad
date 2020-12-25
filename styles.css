@@ -55,7 +55,6 @@ span, p {
 }
 
 .explore-button {
-    text-decoration: none;
     margin-top: 1rem;
     background-color: #fff;
     color:  #7caf03;
@@ -64,16 +63,20 @@ span, p {
     font-size: 3rem;
     line-height: 3rem;
     background-image: linear-gradient(to bottom, #7caf03 50%, #fff 50%);
+}
+
+.custom-button {
+    text-decoration: none;
     background-size: 100% 200%;
     background-position: bottom;
     transition: all .3s ease-out;
 }
 
-.explore-button:focus {
+.custom-button:focus {
     outline: none;
 }
 
-.explore-button:hover {
+.custom-button:hover {
     color: #fff;
     background-position: top left;
 }
@@ -177,11 +180,14 @@ span, p {
 }
 
 .starred {
+    cursor: default;
     font-size: 1.5rem;
     color: #7caf03;
 }
 
+
 .unstarred {
+    cursor: default;
     color: #bfbfbf;
     font-size: 1.5rem;
 }
@@ -198,6 +204,45 @@ span, p {
     text-align: center;
 }
 
+#projects-section h5 {
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.project-box {
+    margin: 3rem 0;
+}
+
+.project-picture img {
+    border-radius: 10px;
+    border: 1px solid #8d8d8d;
+    width: 100%;
+    height: auto;    
+}
+
+.project-buttons {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.project-button {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: inherit;
+    font-weight: bold;
+    margin-top: 1rem;
+    background-color: #fff;
+    border: 3px solid  #212529;
+    padding: 0.5rem 2rem;
+    background-image: linear-gradient(to bottom, #212529 50%, #fff 50%);
+}
+
+.project-button:first-of-type {
+    display: none;
+    margin-left: 0;
+}
 
 /* -------------------------------------------------- Footer ------------------------------------------------ */
 

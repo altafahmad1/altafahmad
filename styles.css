@@ -114,11 +114,11 @@ span, p {
 }
 
 
-.about-me-container {
+.slide-in-left {
     transform: translateX(-20%);
 }
 
-.my-details-container {
+.slide-in-right {
     transform: translateX(20%);
 }
 

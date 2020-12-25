@@ -11,7 +11,6 @@ a {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 /* -------------------------------------------------- Intro ------------------------------------------------ */
 
 .highlighted {
@@ -291,6 +290,10 @@ span, p {
 
 @media only screen and (max-width:767px) {
 
+    #intro-section h1{
+        font-size: 2rem;
+    }
+
     #skills-section {
         text-align: center;
     }
@@ -307,5 +310,9 @@ span, p {
     
     #education-section {
         text-align: center;
+    }
+
+    #education-section .ed-description {
+        text-align: justify;
     }
 }

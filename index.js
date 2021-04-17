@@ -1,5 +1,4 @@
 var count = [0,0,0,0,0,0];
-var text = "hello, I am";
 var txt = ["Hello, I am ", "Altaf Ahmad.", "A Freelance ", "Web Developer ", "and ", "Software Engineer."]; /* The text */
 var speed = 20; /* The speed/duration of the effect in milliseconds */
 
@@ -44,6 +43,14 @@ function typeWriter() {
     }
 }
 
+//Calculate age
+var dob = new Date("04/07/2001");
+var age_date = new Date(Date.now() - dob.getTime());
+var age = Math.abs(age_date.getUTCFullYear() - 1970);
+
+
+document.getElementById("age").innerText = age + " Years";
+
 $(".explore-button").click(function() {
     $('html,body').animate({
         scrollTop: $("#profile-section").offset().top},
@@ -68,3 +75,6 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
     appearOnScroll.observe(slider);
 });
+
+
+document.getElementById("copyright-info").innerText = "Altaf Ahmad - " + new Date().getFullYear();

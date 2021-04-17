@@ -15,7 +15,7 @@ a {
 
 .highlighted {
     font-weight: bold;
-    color: #7caf03;
+    color: #212529;
 }
 
 #intro-section {
@@ -56,12 +56,12 @@ span, p {
 .explore-button {
     margin-top: 1rem;
     background-color: #fff;
-    color:  #7caf03;
-    border: 3px solid  #7caf03;
+    color:  #212529;
+    border: 3px solid  #212529;
     padding: 0 4rem;
     font-size: 3rem;
     line-height: 3rem;
-    background-image: linear-gradient(to bottom, #7caf03 50%, #fff 50%);
+    background-image: linear-gradient(to bottom, #212529 50%, #fff 50%);
 }
 
 .custom-button {
@@ -85,7 +85,7 @@ span, p {
 #profile-section {
     padding: 3rem 0;
     text-align: justify;
-    background-color: #7caf03;
+    background-color: #212529;
     color: #fff;
 }
 
@@ -172,16 +172,19 @@ span, p {
     text-align: left;
 }
 
-.skill-title {
-    display: flex;
-    align-items: center;
-    line-height: 1.5rem;
+
+.skill {
+    border-radius: 0.2rem;
+    display: block;
+    color: #fff;
+    text-align: center;
+    background-color: #212529;
+    margin: 0.5rem 0;
 }
 
-.starred {
-    cursor: default;
-    font-size: 1.5rem;
-    color: #7caf03;
+
+.skill:hover {
+    background-color: #0c0e0f;
 }
 
 
@@ -277,6 +280,7 @@ span, p {
 
 
 
+/* --------------- Responsive Mobile and Laptop View --------------- */
 
 @media only screen and (max-width:1000px) {
     .intro {
